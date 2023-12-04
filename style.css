@@ -1,0 +1,154 @@
+body{
+    background-color: rgb(158, 197, 184);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    flex-wrap: wrap;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#splitContainer{
+    background-color: white;
+    border-radius: 10px;
+    width: 70vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* estilos de la parte de la cuenta */
+#splitContainerBill{
+    width: 50%;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#splitContainerBill input{
+    padding: 0.5em 0.5em;
+    border-radius: 3px;
+    outline: 0;
+    border: 2px solid white;
+    background-color: rgb(214, 230, 224);
+    color: darkslategray;
+    text-align: right;
+    font-weight: bolder;
+    -moz-appearance: textfield;
+}
+#splitContainerBill input:focus{
+    border: 2px solid darkcyan;  
+}
+/* #splitContainerBill input:invalid{
+    border: 2px solid red;  
+} */
+
+
+#tipContainer{
+    display:grid;
+    justify-items:stretch;
+    align-items:stretch;
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    overflow: hidden;
+}
+.tipButton{
+    color: white;
+    background-color: darkslategray;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.tipButton:hover{
+    color: darkslategray;
+    background-color: rgb(174, 211, 197);
+    transition: 0.3s;
+}
+.tipButton:active, .activeButton{
+    color: darkslategray;
+    background-color: rgb(152, 184, 172);
+    transition: 0.3s;
+}
+.tipButton:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#splitContainerBill #customTip{
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+
+/* estilos de la parte del resultado */
+#splitContainerResult{
+    width: 50%;
+    padding: 1em 2em;
+    background-color: darkslategray;
+    margin: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.resultAmount{
+    display: flex;
+    flex-direction: column;
+}
+.resultAmountTip, .resultAmountTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultAmountTip h2, .resultAmountTotal h2{
+    color: white;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.resultAmountTip div p, .resultAmountTotal div p{
+    color: rgb(116, 145, 135);
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.result{
+    color: darkcyan;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#resetButton{
+    padding: 0.5em 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    background-color: darkcyan;
+    color: darkslategray;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#resetButton:hover{
+    background-color: rgb(214, 230, 224);
+    box-shadow: 3px 3px 10px black;
+    transition: 0.3s;
+}
+#resetButton:active{
+    background-color: rgb(115, 141, 131);
+    box-shadow: 3px 3px 10px black;
+    transition: 0.3s;
+}

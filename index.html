@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Splitter</h1>
+    </header>
+    <main>
+        <div id="splitContainer">
+            <div id="splitContainerBill">
+                <label for="bill">Bill</label> <br>
+                <input type="number" id="bill" name="bill" placeholder="149.50"> <br>
+
+                <label for="tip">Select Tip %</label> <br>
+                <div id="tipContainer">
+                    <button class="tipButton" value="5">5%</button>
+                    <button class="tipButton" value="10">10%</button>
+                    <button class="tipButton" value="15">15%</button>
+                    <button class="tipButton" value="25">25%</button>
+                    <button class="tipButton" value="50">50%</button>
+                    <button class="tipButton">
+                        <input id="customTip" type="number" placeholder="Custom">
+                    </button>
+                </div> <br>
+                
+                <label for="people">Number of People</label> <br>
+                <input type="number" id="people" name="people" placeholder="7"> <br>
+            </div>
+            <div id="splitContainerResult">
+                <div class="resultAmount">
+
+                    <div class="resultAmountTip">
+                        <div>
+                            <h2>Tip Amount</h2>
+                            <p>/ person</p>
+                        </div>
+                        <p class="result">$<span id="tipResult">0.00</span></p>
+                    </div>
+
+                    <div class="resultAmountTotal">
+                        <div>
+                            <h2>Total</h2>
+                            <p>/ person</p>
+                        </div>
+                        <p class="result">$<span id="totalResult">0.00</span></p>
+                    </div>
+
+                </div>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
