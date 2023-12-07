@@ -14,7 +14,7 @@
         <div id="splitContainer">
             <div id="splitContainerBill">
                 <label for="bill">Bill</label> <br>
-                <input type="number" id="bill" name="bill" placeholder="149.50"> <br>
+                <input type="number" id="bill" name="bill" placeholder="149.50" min="0.02" pattern="^\d*\.?\d+$"> <br>
 
                 <label for="tip">Select Tip %</label> <br>
                 <div id="tipContainer">
@@ -24,12 +24,12 @@
                     <button class="tipButton" value="25">25%</button>
                     <button class="tipButton" value="50">50%</button>
                     <button class="tipButton">
-                        <input id="customTip" type="number" placeholder="Custom">
+                        <input id="customTip" type="number" placeholder="Custom" pattern="^\d*\.?\d+$" min="0.01">
                     </button>
                 </div> <br>
                 
                 <label for="people">Number of People</label> <br>
-                <input type="number" id="people" name="people" placeholder="7"> <br>
+                <input type="number" id="people" name="people" placeholder="7" min="2" pattern="^\d*\.?\d+$"> <br>
             </div>
             <div id="splitContainerResult">
                 <div class="resultAmount">

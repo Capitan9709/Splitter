@@ -17,14 +17,26 @@ var tipValue = 0;
 billElement.addEventListener("keyup", function(){
     billValue = billElement.value
     // console.log(billValue)
-    updateTotal()
+    if(billValue.includes("-")){
+        alert("You can´t use negative values")
+        billElement.value = "";
+    }
+    else{
+        updateTotal()
+    }
 });
 
 // Funcion para que actualice valor de las personas
 peopleElement.addEventListener("keyup", function(){
     peopleValue = peopleElement.value
     // console.log(peopleValue)
-    updateTotal()
+    if(peopleValue.includes("-")){
+        alert("You can´t use negative values")
+        peopleElement.value = "";
+    }
+    else{
+        updateTotal()
+    }
 });
 
 // Funcion para que restaure las variables
@@ -54,7 +66,14 @@ customTipElement.addEventListener("keyup", function(){
     tipButtons[5].value = customTipValue
     // console.log(tipButtons[5].value)
     tipValue = tipButtons[5].value
-    updateTotal()
+
+    if(tipValue.includes("-")){
+        alert("You can´t use negative values")
+        tipButtons[5].value = "";
+    }
+    else{
+        updateTotal()
+    }
 });
 
 // Funcion para que actualice valor del total
@@ -68,11 +87,11 @@ function updateTotal(){
         tipResult.innerHTML = "0.00"
     }
     else{
-        tip = (billValue * tipValue) / 100
+        let tip = (billValue * tipValue) / 100
         tipResult.innerHTML = (tip / peopleValue).toFixed(2)
         console.log(tipResult.innerHTML)
 
-        result = (billValue / peopleValue) + (tip / peopleValue)
+        let result = (billValue / peopleValue) + (tip / peopleValue)
         totalResult.innerHTML = result.toFixed(2)
         
         console.log(totalResult.innerHTML)
